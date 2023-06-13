@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Karla', sans-serif;
+	
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px 20px ;
+  
+  text-align:center;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px; box-sizing: inherit;}
+
+/* Clear floats after the columns */
+.row:after {
+	
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  color: grey;
+  font-style: italic;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 350px;
+  margin-bottom: 15px;
+  padding-bottom:10px;
+}
+
+
+}
+div.picture1 {
+   width:100%; /*width of your image*/
+   height:50%; /*height of your image*/
+   background-image:url('images/Tile1.png');
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+
+div.picture2 {
+   width:100%; /*width of your image*/
+   height:50%; /*height of your image*/
+   background-image:url('images/Tile2.png');
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+
+
+.col-md-6 {
+  padding:50px;
+}
+
+.jumbotron {
+  background-color: #7986CB;
+}
+.img-top{
+	width:100%; /*width of your image*/
+	height:100%; /*height of your image*/
+    margin:0; /* If you want no margin */
+	padding:0; /*if your want to padding */
+}
+
+h1{
+	text-align:center;
+	font-style: bold;
+	padding: 15px;
+}
+h3{
+	padding-left:30px;
+	padding-bottom:15px;
+	font-style: bold;
+}
+li {
+	font-size:20px;
+}
+
+.modal-content{
+	width:700px; 
+	height:650px; 
+	font-size:20px;
+}
+ .textBox {
+        height: 5rem;
+        margin: auto;
+padding-left:10px;
+        overflow: hidden;
+    }
+
+    .textBox ul {
+        margin: 0 0.625rem;
+        padding: 0;
+        animation: moveText 8s infinite;
+    }
+
+    .textBox ul li {
+        display: flex;
+        align-items: left;
+        font-size:30px;
+        height: 5rem;
+        list-style: none;
+    }
+
+    @keyframes moveText {
+
+        15%,
+        25% {
+            transform: translateY(-20%);
+        }
+
+        40%,
+        50% {
+            transform: translateY(-40%);
+        }
+
+        65%,
+        75% {
+            transform: translateY(-60%);
+        }
+
+        90%,
+        100% {
+            transform: translateY(-80%);
+        }
+    }

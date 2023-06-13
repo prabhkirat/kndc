@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Send Mail</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<link rel="stylesheet"
+			href="contactus.css" />
+</head>
+<body>
+<div class="container">
+
+
+    <h3> Send Email using Javascript </h3>
+    <form action="#" method="post">
+	<div class="row">
+	<div class="col-md-6"
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter Name">
+		</div>
+		<div class="col-md-6">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email"> 
+		</div>
+        <label for="message">Message</label>
+        <textarea  id="message" placeholder="Enter Message" rows="3"> </textarea>  <br>
+
+        <button type="submit" id="submit" onclick="sendEmail()"> Send Email </button>
+		</div>
+    </form>
+     <div id="response"></div>
+	 </div>
+	 
+</body>
+
+
+<script>  
+function sendEmail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let finalmessage = `Name : ${name} <br>  Email : ${email} <br>  Message : ${message} <br>`;
+
+    Email.send({
+        SecureToken : "63845438-0c5b-4ea2-a700-3971953e7c7c",
+        To : 'prabhkirat6333@gmail.com',
+        From : "prabhkirat0031@gmail.com",
+        Subject : "Mail from website",
+        Body : finalmessage
+    }).then(
+      message => alert(message)
+    );
+}
+</script>
+
+
+</html>
